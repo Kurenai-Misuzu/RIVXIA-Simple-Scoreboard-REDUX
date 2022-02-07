@@ -44,6 +44,7 @@
             this.player1Name = new System.Windows.Forms.TextBox();
             this.top8BracketTab = new System.Windows.Forms.TabPage();
             this.scoreboardExtrasTab = new System.Windows.Forms.TabPage();
+            this.gameSelector = new System.Windows.Forms.ComboBox();
             this.scoreboardTabController.SuspendLayout();
             this.mainScoreboardTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player2Score)).BeginInit();
@@ -63,6 +64,7 @@
             // 
             // mainScoreboardTab
             // 
+            this.mainScoreboardTab.Controls.Add(this.gameSelector);
             this.mainScoreboardTab.Controls.Add(this.scoreboardAdditionsDivider);
             this.mainScoreboardTab.Controls.Add(this.scorebordAdditions);
             this.mainScoreboardTab.Controls.Add(this.scoreboardEssentialsDivider);
@@ -200,6 +202,15 @@
             this.scoreboardExtrasTab.Text = "Scoreboard Extras";
             this.scoreboardExtrasTab.UseVisualStyleBackColor = true;
             // 
+            // gameSelector
+            // 
+            this.gameSelector.FormattingEnabled = true;
+            this.gameSelector.Location = new System.Drawing.Point(6, 164);
+            this.gameSelector.Name = "gameSelector";
+            this.gameSelector.Size = new System.Drawing.Size(507, 23);
+            this.gameSelector.TabIndex = 12;
+            this.gameSelector.Text = "Select Game Being Played";
+            // 
             // Scoreboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -240,5 +251,7 @@
 
         private Label scoreboardAdditionsDivider;
         private Label scorebordAdditions;
+
+        private ComboBox gameSelector;
     }
 }
