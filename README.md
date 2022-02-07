@@ -24,8 +24,11 @@ An easy to use top 8 bracket editor
 Allows switching of character images for different games easily.
 ### Country / State Flags
 Allows the livestream to showcase what region a player is from.
-### Port Selector
-Allows the streamer to easily select what port a player is on. (Mostly used for Smash games)
+### Player Logos
+Allows the livestream to showcase what organization a player is from.
+### Player Subimages
+Allows the streamer to easily add another image that is related to a player.  
+An example of this would be moon type in Melty Blood AACC and ports in Smash Bros. games.  
 
 ## Other Improvements
 ### Less Redundant Code
