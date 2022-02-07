@@ -30,21 +30,28 @@
         {
             this.scoreboardTabController = new System.Windows.Forms.TabControl();
             this.mainScoreboardTab = new System.Windows.Forms.TabPage();
+            this.player2Logo = new System.Windows.Forms.ComboBox();
+            this.player1Logo = new System.Windows.Forms.ComboBox();
+            this.additionsSwapButton = new System.Windows.Forms.Button();
+            this.player2Flag = new System.Windows.Forms.ComboBox();
+            this.player1Flag = new System.Windows.Forms.ComboBox();
+            this.player2CharacterSelect = new System.Windows.Forms.ComboBox();
+            this.player1CharacterSelect = new System.Windows.Forms.ComboBox();
+            this.gameSelector = new System.Windows.Forms.ComboBox();
             this.scoreboardAdditionsDivider = new System.Windows.Forms.Label();
             this.scorebordAdditions = new System.Windows.Forms.Label();
             this.scoreboardEssentialsDivider = new System.Windows.Forms.Label();
             this.scoreboardEssentials = new System.Windows.Forms.Label();
             this.player2Subtext = new System.Windows.Forms.TextBox();
             this.player1Subtext = new System.Windows.Forms.TextBox();
-            this.swapButton = new System.Windows.Forms.Button();
+            this.essentialSwapButton = new System.Windows.Forms.Button();
             this.set = new System.Windows.Forms.TextBox();
             this.player2Score = new System.Windows.Forms.NumericUpDown();
             this.player1Score = new System.Windows.Forms.NumericUpDown();
             this.player2Name = new System.Windows.Forms.TextBox();
             this.player1Name = new System.Windows.Forms.TextBox();
-            this.top8BracketTab = new System.Windows.Forms.TabPage();
             this.scoreboardExtrasTab = new System.Windows.Forms.TabPage();
-            this.gameSelector = new System.Windows.Forms.ComboBox();
+            this.top8BracketTab = new System.Windows.Forms.TabPage();
             this.scoreboardTabController.SuspendLayout();
             this.mainScoreboardTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player2Score)).BeginInit();
@@ -54,16 +61,23 @@
             // scoreboardTabController
             // 
             this.scoreboardTabController.Controls.Add(this.mainScoreboardTab);
-            this.scoreboardTabController.Controls.Add(this.top8BracketTab);
             this.scoreboardTabController.Controls.Add(this.scoreboardExtrasTab);
+            this.scoreboardTabController.Controls.Add(this.top8BracketTab);
             this.scoreboardTabController.Location = new System.Drawing.Point(12, 12);
             this.scoreboardTabController.Name = "scoreboardTabController";
             this.scoreboardTabController.SelectedIndex = 0;
-            this.scoreboardTabController.Size = new System.Drawing.Size(532, 313);
+            this.scoreboardTabController.Size = new System.Drawing.Size(528, 309);
             this.scoreboardTabController.TabIndex = 0;
             // 
             // mainScoreboardTab
             // 
+            this.mainScoreboardTab.Controls.Add(this.player2Logo);
+            this.mainScoreboardTab.Controls.Add(this.player1Logo);
+            this.mainScoreboardTab.Controls.Add(this.additionsSwapButton);
+            this.mainScoreboardTab.Controls.Add(this.player2Flag);
+            this.mainScoreboardTab.Controls.Add(this.player1Flag);
+            this.mainScoreboardTab.Controls.Add(this.player2CharacterSelect);
+            this.mainScoreboardTab.Controls.Add(this.player1CharacterSelect);
             this.mainScoreboardTab.Controls.Add(this.gameSelector);
             this.mainScoreboardTab.Controls.Add(this.scoreboardAdditionsDivider);
             this.mainScoreboardTab.Controls.Add(this.scorebordAdditions);
@@ -71,7 +85,7 @@
             this.mainScoreboardTab.Controls.Add(this.scoreboardEssentials);
             this.mainScoreboardTab.Controls.Add(this.player2Subtext);
             this.mainScoreboardTab.Controls.Add(this.player1Subtext);
-            this.mainScoreboardTab.Controls.Add(this.swapButton);
+            this.mainScoreboardTab.Controls.Add(this.essentialSwapButton);
             this.mainScoreboardTab.Controls.Add(this.set);
             this.mainScoreboardTab.Controls.Add(this.player2Score);
             this.mainScoreboardTab.Controls.Add(this.player1Score);
@@ -80,10 +94,82 @@
             this.mainScoreboardTab.Location = new System.Drawing.Point(4, 24);
             this.mainScoreboardTab.Name = "mainScoreboardTab";
             this.mainScoreboardTab.Padding = new System.Windows.Forms.Padding(3);
-            this.mainScoreboardTab.Size = new System.Drawing.Size(524, 285);
+            this.mainScoreboardTab.Size = new System.Drawing.Size(520, 281);
             this.mainScoreboardTab.TabIndex = 0;
             this.mainScoreboardTab.Text = "Main Scoreboard";
             this.mainScoreboardTab.UseVisualStyleBackColor = true;
+            // 
+            // player2Logo
+            // 
+            this.player2Logo.FormattingEnabled = true;
+            this.player2Logo.Location = new System.Drawing.Point(309, 251);
+            this.player2Logo.Name = "player2Logo";
+            this.player2Logo.Size = new System.Drawing.Size(204, 23);
+            this.player2Logo.TabIndex = 18;
+            this.player2Logo.Text = "Player 2 Logo";
+            // 
+            // player1Logo
+            // 
+            this.player1Logo.FormattingEnabled = true;
+            this.player1Logo.Location = new System.Drawing.Point(6, 251);
+            this.player1Logo.Name = "player1Logo";
+            this.player1Logo.Size = new System.Drawing.Size(204, 23);
+            this.player1Logo.TabIndex = 17;
+            this.player1Logo.Text = "Player 1 Logo";
+            // 
+            // additionsSwapButton
+            // 
+            this.additionsSwapButton.Location = new System.Drawing.Point(216, 206);
+            this.additionsSwapButton.Name = "additionsSwapButton";
+            this.additionsSwapButton.Size = new System.Drawing.Size(87, 52);
+            this.additionsSwapButton.TabIndex = 19;
+            this.additionsSwapButton.Text = "< SWAP >";
+            this.additionsSwapButton.UseVisualStyleBackColor = true;
+            // 
+            // player2Flag
+            // 
+            this.player2Flag.FormattingEnabled = true;
+            this.player2Flag.Location = new System.Drawing.Point(309, 222);
+            this.player2Flag.Name = "player2Flag";
+            this.player2Flag.Size = new System.Drawing.Size(204, 23);
+            this.player2Flag.TabIndex = 16;
+            this.player2Flag.Text = "Player 2 Country / State";
+            // 
+            // player1Flag
+            // 
+            this.player1Flag.FormattingEnabled = true;
+            this.player1Flag.Location = new System.Drawing.Point(6, 222);
+            this.player1Flag.Name = "player1Flag";
+            this.player1Flag.Size = new System.Drawing.Size(204, 23);
+            this.player1Flag.TabIndex = 15;
+            this.player1Flag.Text = "Player 1 Country / State";
+            // 
+            // player2CharacterSelect
+            // 
+            this.player2CharacterSelect.FormattingEnabled = true;
+            this.player2CharacterSelect.Location = new System.Drawing.Point(309, 193);
+            this.player2CharacterSelect.Name = "player2CharacterSelect";
+            this.player2CharacterSelect.Size = new System.Drawing.Size(204, 23);
+            this.player2CharacterSelect.TabIndex = 14;
+            this.player2CharacterSelect.Text = "Player 2 Character";
+            // 
+            // player1CharacterSelect
+            // 
+            this.player1CharacterSelect.FormattingEnabled = true;
+            this.player1CharacterSelect.Location = new System.Drawing.Point(6, 193);
+            this.player1CharacterSelect.Name = "player1CharacterSelect";
+            this.player1CharacterSelect.Size = new System.Drawing.Size(204, 23);
+            this.player1CharacterSelect.TabIndex = 13;
+            this.player1CharacterSelect.Text = "Player 1 Character";
+            // 
+            // gameSelector
+            // 
+            this.gameSelector.FormattingEnabled = true;
+            this.gameSelector.Location = new System.Drawing.Point(6, 164);
+            this.gameSelector.Name = "gameSelector";
+            this.gameSelector.Size = new System.Drawing.Size(507, 23);
+            this.gameSelector.TabIndex = 12;
+            this.gameSelector.Text = "Select Game Being Played";
             // 
             // scoreboardAdditionsDivider
             // 
@@ -135,14 +221,14 @@
             this.player1Subtext.TabIndex = 4;
             this.player1Subtext.Text = "Player 1 Subtext";
             // 
-            // swapButton
+            // essentialSwapButton
             // 
-            this.swapButton.Location = new System.Drawing.Point(216, 36);
-            this.swapButton.Name = "swapButton";
-            this.swapButton.Size = new System.Drawing.Size(87, 52);
-            this.swapButton.TabIndex = 7;
-            this.swapButton.Text = " < SWAP >";
-            this.swapButton.UseVisualStyleBackColor = true;
+            this.essentialSwapButton.Location = new System.Drawing.Point(216, 36);
+            this.essentialSwapButton.Name = "essentialSwapButton";
+            this.essentialSwapButton.Size = new System.Drawing.Size(87, 52);
+            this.essentialSwapButton.TabIndex = 7;
+            this.essentialSwapButton.Text = " < SWAP >";
+            this.essentialSwapButton.UseVisualStyleBackColor = true;
             // 
             // set
             // 
@@ -182,34 +268,25 @@
             this.player1Name.TabIndex = 0;
             this.player1Name.Text = "Player 1 Name";
             // 
-            // top8BracketTab
-            // 
-            this.top8BracketTab.Location = new System.Drawing.Point(4, 24);
-            this.top8BracketTab.Name = "top8BracketTab";
-            this.top8BracketTab.Padding = new System.Windows.Forms.Padding(3);
-            this.top8BracketTab.Size = new System.Drawing.Size(524, 285);
-            this.top8BracketTab.TabIndex = 1;
-            this.top8BracketTab.Text = "Top 8 Bracket";
-            this.top8BracketTab.UseVisualStyleBackColor = true;
-            // 
             // scoreboardExtrasTab
             // 
             this.scoreboardExtrasTab.Location = new System.Drawing.Point(4, 24);
             this.scoreboardExtrasTab.Name = "scoreboardExtrasTab";
             this.scoreboardExtrasTab.Padding = new System.Windows.Forms.Padding(3);
-            this.scoreboardExtrasTab.Size = new System.Drawing.Size(524, 285);
-            this.scoreboardExtrasTab.TabIndex = 2;
+            this.scoreboardExtrasTab.Size = new System.Drawing.Size(520, 281);
+            this.scoreboardExtrasTab.TabIndex = 1;
             this.scoreboardExtrasTab.Text = "Scoreboard Extras";
             this.scoreboardExtrasTab.UseVisualStyleBackColor = true;
             // 
-            // gameSelector
+            // top8BracketTab
             // 
-            this.gameSelector.FormattingEnabled = true;
-            this.gameSelector.Location = new System.Drawing.Point(6, 164);
-            this.gameSelector.Name = "gameSelector";
-            this.gameSelector.Size = new System.Drawing.Size(507, 23);
-            this.gameSelector.TabIndex = 12;
-            this.gameSelector.Text = "Select Game Being Played";
+            this.top8BracketTab.Location = new System.Drawing.Point(4, 24);
+            this.top8BracketTab.Name = "top8BracketTab";
+            this.top8BracketTab.Padding = new System.Windows.Forms.Padding(3);
+            this.top8BracketTab.Size = new System.Drawing.Size(520, 281);
+            this.top8BracketTab.TabIndex = 2;
+            this.top8BracketTab.Text = "Top 8 Bracket";
+            this.top8BracketTab.UseVisualStyleBackColor = true;
             // 
             // Scoreboard
             // 
@@ -234,8 +311,8 @@
         private TabControl scoreboardTabController;
 
         private TabPage mainScoreboardTab;
-        private TabPage top8BracketTab;
         private TabPage scoreboardExtrasTab;
+        private TabPage top8BracketTab;
 
         private Label scoreboardEssentials;
         private Label scoreboardEssentialsDivider;
@@ -247,11 +324,18 @@
         private TextBox player1Subtext;
         private TextBox player2Subtext;
         private TextBox set;
-        private Button swapButton;
+        private Button essentialSwapButton;
 
         private Label scoreboardAdditionsDivider;
         private Label scorebordAdditions;
 
         private ComboBox gameSelector;
+        private ComboBox player1CharacterSelect;
+        private ComboBox player2CharacterSelect;
+        private ComboBox player1Flag;
+        private ComboBox player2Flag;
+        private ComboBox player2Logo;
+        private ComboBox player1Logo;
+        private Button additionsSwapButton;
     }
 }
