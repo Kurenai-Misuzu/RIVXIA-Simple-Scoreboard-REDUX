@@ -51,6 +51,23 @@
             this.player2Name = new System.Windows.Forms.TextBox();
             this.player1Name = new System.Windows.Forms.TextBox();
             this.scoreboardExtrasTab = new System.Windows.Forms.TabPage();
+            this.miscText2 = new System.Windows.Forms.TextBox();
+            this.miscText1 = new System.Windows.Forms.TextBox();
+            this.miscTextBoxesDivider = new System.Windows.Forms.Label();
+            this.miscTextBoxesLabel = new System.Windows.Forms.Label();
+            this.player2ExtraLogo = new System.Windows.Forms.ComboBox();
+            this.player1ExtraLogo = new System.Windows.Forms.ComboBox();
+            this.extraLogoSwap = new System.Windows.Forms.Button();
+            this.extraLogoSelector = new System.Windows.Forms.ComboBox();
+            this.extraLogoDivider = new System.Windows.Forms.Label();
+            this.extraLogoLabel = new System.Windows.Forms.Label();
+            this.commentatorSwapButton = new System.Windows.Forms.Button();
+            this.commentator2Subtext = new System.Windows.Forms.TextBox();
+            this.commentator2Name = new System.Windows.Forms.TextBox();
+            this.commentator1Subtext = new System.Windows.Forms.TextBox();
+            this.commentator1Name = new System.Windows.Forms.TextBox();
+            this.commentaryLabelDivider = new System.Windows.Forms.Label();
+            this.commentaryLabel = new System.Windows.Forms.Label();
             this.top8BracketTab = new System.Windows.Forms.TabPage();
             this.losersFinals = new System.Windows.Forms.Label();
             this.losersSemisLabel = new System.Windows.Forms.Label();
@@ -105,6 +122,7 @@
             this.mainScoreboardTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player2Score)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1Score)).BeginInit();
+            this.scoreboardExtrasTab.SuspendLayout();
             this.top8BracketTab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -321,6 +339,23 @@
             // 
             // scoreboardExtrasTab
             // 
+            this.scoreboardExtrasTab.Controls.Add(this.miscText2);
+            this.scoreboardExtrasTab.Controls.Add(this.miscText1);
+            this.scoreboardExtrasTab.Controls.Add(this.miscTextBoxesDivider);
+            this.scoreboardExtrasTab.Controls.Add(this.miscTextBoxesLabel);
+            this.scoreboardExtrasTab.Controls.Add(this.player2ExtraLogo);
+            this.scoreboardExtrasTab.Controls.Add(this.player1ExtraLogo);
+            this.scoreboardExtrasTab.Controls.Add(this.extraLogoSwap);
+            this.scoreboardExtrasTab.Controls.Add(this.extraLogoSelector);
+            this.scoreboardExtrasTab.Controls.Add(this.extraLogoDivider);
+            this.scoreboardExtrasTab.Controls.Add(this.extraLogoLabel);
+            this.scoreboardExtrasTab.Controls.Add(this.commentatorSwapButton);
+            this.scoreboardExtrasTab.Controls.Add(this.commentator2Subtext);
+            this.scoreboardExtrasTab.Controls.Add(this.commentator2Name);
+            this.scoreboardExtrasTab.Controls.Add(this.commentator1Subtext);
+            this.scoreboardExtrasTab.Controls.Add(this.commentator1Name);
+            this.scoreboardExtrasTab.Controls.Add(this.commentaryLabelDivider);
+            this.scoreboardExtrasTab.Controls.Add(this.commentaryLabel);
             this.scoreboardExtrasTab.Location = new System.Drawing.Point(4, 24);
             this.scoreboardExtrasTab.Name = "scoreboardExtrasTab";
             this.scoreboardExtrasTab.Padding = new System.Windows.Forms.Padding(3);
@@ -328,6 +363,153 @@
             this.scoreboardExtrasTab.TabIndex = 1;
             this.scoreboardExtrasTab.Text = "Scoreboard Extras";
             this.scoreboardExtrasTab.UseVisualStyleBackColor = true;
+            // 
+            // miscText2
+            // 
+            this.miscText2.Location = new System.Drawing.Point(6, 252);
+            this.miscText2.Name = "miscText2";
+            this.miscText2.Size = new System.Drawing.Size(507, 23);
+            this.miscText2.TabIndex = 18;
+            this.miscText2.Text = "Misc Text 2";
+            // 
+            // miscText1
+            // 
+            this.miscText1.Location = new System.Drawing.Point(6, 226);
+            this.miscText1.Name = "miscText1";
+            this.miscText1.Size = new System.Drawing.Size(507, 23);
+            this.miscText1.TabIndex = 17;
+            this.miscText1.Text = "Misc Text 1";
+            // 
+            // miscTextBoxesDivider
+            // 
+            this.miscTextBoxesDivider.AccessibleDescription = "";
+            this.miscTextBoxesDivider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.miscTextBoxesDivider.Location = new System.Drawing.Point(6, 211);
+            this.miscTextBoxesDivider.Name = "miscTextBoxesDivider";
+            this.miscTextBoxesDivider.Size = new System.Drawing.Size(507, 2);
+            this.miscTextBoxesDivider.TabIndex = 16;
+            this.miscTextBoxesDivider.Text = "label1";
+            // 
+            // miscTextBoxesLabel
+            // 
+            this.miscTextBoxesLabel.AutoSize = true;
+            this.miscTextBoxesLabel.Location = new System.Drawing.Point(6, 196);
+            this.miscTextBoxesLabel.Name = "miscTextBoxesLabel";
+            this.miscTextBoxesLabel.Size = new System.Drawing.Size(90, 15);
+            this.miscTextBoxesLabel.TabIndex = 15;
+            this.miscTextBoxesLabel.Text = "Misc Text Boxes";
+            // 
+            // player2ExtraLogo
+            // 
+            this.player2ExtraLogo.FormattingEnabled = true;
+            this.player2ExtraLogo.Location = new System.Drawing.Point(309, 160);
+            this.player2ExtraLogo.Name = "player2ExtraLogo";
+            this.player2ExtraLogo.Size = new System.Drawing.Size(204, 23);
+            this.player2ExtraLogo.TabIndex = 14;
+            this.player2ExtraLogo.Text = "Player 2 Extra Logo";
+            // 
+            // player1ExtraLogo
+            // 
+            this.player1ExtraLogo.FormattingEnabled = true;
+            this.player1ExtraLogo.Location = new System.Drawing.Point(6, 160);
+            this.player1ExtraLogo.Name = "player1ExtraLogo";
+            this.player1ExtraLogo.Size = new System.Drawing.Size(204, 23);
+            this.player1ExtraLogo.TabIndex = 13;
+            this.player1ExtraLogo.Text = "Player 1 Extra Logo";
+            // 
+            // extraLogoSwap
+            // 
+            this.extraLogoSwap.Location = new System.Drawing.Point(216, 160);
+            this.extraLogoSwap.Name = "extraLogoSwap";
+            this.extraLogoSwap.Size = new System.Drawing.Size(87, 23);
+            this.extraLogoSwap.TabIndex = 12;
+            this.extraLogoSwap.Text = " < SWAP >";
+            this.extraLogoSwap.UseVisualStyleBackColor = true;
+            // 
+            // extraLogoSelector
+            // 
+            this.extraLogoSelector.FormattingEnabled = true;
+            this.extraLogoSelector.Location = new System.Drawing.Point(6, 131);
+            this.extraLogoSelector.Name = "extraLogoSelector";
+            this.extraLogoSelector.Size = new System.Drawing.Size(507, 23);
+            this.extraLogoSelector.TabIndex = 9;
+            this.extraLogoSelector.Text = "Extra Logo Select";
+            // 
+            // extraLogoDivider
+            // 
+            this.extraLogoDivider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.extraLogoDivider.Location = new System.Drawing.Point(6, 116);
+            this.extraLogoDivider.Name = "extraLogoDivider";
+            this.extraLogoDivider.Size = new System.Drawing.Size(507, 2);
+            this.extraLogoDivider.TabIndex = 8;
+            this.extraLogoDivider.Text = "label2";
+            // 
+            // extraLogoLabel
+            // 
+            this.extraLogoLabel.AutoSize = true;
+            this.extraLogoLabel.Location = new System.Drawing.Point(6, 101);
+            this.extraLogoLabel.Name = "extraLogoLabel";
+            this.extraLogoLabel.Size = new System.Drawing.Size(127, 15);
+            this.extraLogoLabel.TabIndex = 7;
+            this.extraLogoLabel.Text = "Extra Logo / Subimage";
+            // 
+            // commentatorSwapButton
+            // 
+            this.commentatorSwapButton.Location = new System.Drawing.Point(216, 36);
+            this.commentatorSwapButton.Name = "commentatorSwapButton";
+            this.commentatorSwapButton.Size = new System.Drawing.Size(87, 52);
+            this.commentatorSwapButton.TabIndex = 6;
+            this.commentatorSwapButton.Text = "< SWAP >";
+            this.commentatorSwapButton.UseVisualStyleBackColor = true;
+            // 
+            // commentator2Subtext
+            // 
+            this.commentator2Subtext.Location = new System.Drawing.Point(309, 65);
+            this.commentator2Subtext.Name = "commentator2Subtext";
+            this.commentator2Subtext.Size = new System.Drawing.Size(204, 23);
+            this.commentator2Subtext.TabIndex = 5;
+            this.commentator2Subtext.Text = "Commentator 2 Subtext";
+            // 
+            // commentator2Name
+            // 
+            this.commentator2Name.Location = new System.Drawing.Point(309, 36);
+            this.commentator2Name.Name = "commentator2Name";
+            this.commentator2Name.Size = new System.Drawing.Size(204, 23);
+            this.commentator2Name.TabIndex = 4;
+            this.commentator2Name.Text = "Commentator 2";
+            // 
+            // commentator1Subtext
+            // 
+            this.commentator1Subtext.Location = new System.Drawing.Point(6, 65);
+            this.commentator1Subtext.Name = "commentator1Subtext";
+            this.commentator1Subtext.Size = new System.Drawing.Size(204, 23);
+            this.commentator1Subtext.TabIndex = 3;
+            this.commentator1Subtext.Text = "Commentator 1 Subtext";
+            // 
+            // commentator1Name
+            // 
+            this.commentator1Name.Location = new System.Drawing.Point(6, 36);
+            this.commentator1Name.Name = "commentator1Name";
+            this.commentator1Name.Size = new System.Drawing.Size(204, 23);
+            this.commentator1Name.TabIndex = 2;
+            this.commentator1Name.Text = "Commentator 1";
+            // 
+            // commentaryLabelDivider
+            // 
+            this.commentaryLabelDivider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.commentaryLabelDivider.Location = new System.Drawing.Point(6, 21);
+            this.commentaryLabelDivider.Name = "commentaryLabelDivider";
+            this.commentaryLabelDivider.Size = new System.Drawing.Size(507, 2);
+            this.commentaryLabelDivider.TabIndex = 1;
+            // 
+            // commentaryLabel
+            // 
+            this.commentaryLabel.AutoSize = true;
+            this.commentaryLabel.Location = new System.Drawing.Point(6, 6);
+            this.commentaryLabel.Name = "commentaryLabel";
+            this.commentaryLabel.Size = new System.Drawing.Size(77, 15);
+            this.commentaryLabel.TabIndex = 0;
+            this.commentaryLabel.Text = "Commentary";
             // 
             // top8BracketTab
             // 
@@ -809,6 +991,8 @@
             this.mainScoreboardTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player2Score)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1Score)).EndInit();
+            this.scoreboardExtrasTab.ResumeLayout(false);
+            this.scoreboardExtrasTab.PerformLayout();
             this.top8BracketTab.ResumeLayout(false);
             this.top8BracketTab.PerformLayout();
             this.ResumeLayout(false);
@@ -912,7 +1096,7 @@
         private Button losersFinals1W;
         private Button losersFinals2W;
 
-        // Labels
+        // Top 8 Labels
         private Label winnersSemisLabel;
         private Label losersFinals;
         private Label losersSemisLabel;
@@ -921,5 +1105,29 @@
         private Label winnerLabel;
         private Label grandFinalsLabel;
         private Label winnersFinalsLabel;
+
+        // Scoreboard Extras
+        // Commentary
+        private Label commentaryLabel;
+        private Label commentaryLabelDivider;
+        private TextBox commentator1Name;
+        private TextBox commentator2Name;
+        private TextBox commentator1Subtext;
+        private TextBox commentator2Subtext;
+        private Button commentatorSwapButton;
+
+        // Extra Logo
+        private Label extraLogoLabel;
+        private Label extraLogoDivider;
+        private ComboBox extraLogoSelector;
+        private ComboBox player2ExtraLogo;
+        private ComboBox player1ExtraLogo;
+        private Button extraLogoSwap;
+
+        // Misc Text Boxes
+        private Label miscTextBoxesLabel;
+        private Label miscTextBoxesDivider;
+        private TextBox miscText2;
+        private TextBox miscText1;
     }
 }
