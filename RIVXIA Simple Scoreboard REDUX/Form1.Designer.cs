@@ -194,6 +194,7 @@
             this.additionsSwapButton.TabIndex = 19;
             this.additionsSwapButton.Text = "< SWAP >";
             this.additionsSwapButton.UseVisualStyleBackColor = true;
+            this.additionsSwapButton.Click += new System.EventHandler(this.additionsSwapButton_Click);
             // 
             // player2Flag
             // 
@@ -298,6 +299,7 @@
             this.essentialSwapButton.TabIndex = 7;
             this.essentialSwapButton.Text = " < SWAP >";
             this.essentialSwapButton.UseVisualStyleBackColor = true;
+            this.essentialSwapButton.Click += new System.EventHandler(this.essentialSwapButton_Click);
             // 
             // set
             // 
