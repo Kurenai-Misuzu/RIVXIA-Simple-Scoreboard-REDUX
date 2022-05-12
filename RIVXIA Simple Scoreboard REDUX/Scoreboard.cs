@@ -115,8 +115,6 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             player2ExtraLogo.SelectedItem = tempLogo;
         }
 
-
-
         // READING SUBFOLDERS BASED ON GAMES / LOGOS //////////////////////////////////////////////
 
         private void gameSelector_SelectedIndexChanged(object sender, EventArgs e)
