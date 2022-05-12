@@ -427,6 +427,7 @@
             this.extraLogoSwap.TabIndex = 12;
             this.extraLogoSwap.Text = " < SWAP >";
             this.extraLogoSwap.UseVisualStyleBackColor = true;
+            this.extraLogoSwap.Click += new System.EventHandler(this.extraLogoSwap_Click);
             // 
             // extraLogoSelector
             // 
@@ -463,6 +464,7 @@
             this.commentatorSwapButton.TabIndex = 6;
             this.commentatorSwapButton.Text = "< SWAP >";
             this.commentatorSwapButton.UseVisualStyleBackColor = true;
+            this.commentatorSwapButton.Click += new System.EventHandler(this.commentatorSwapButton_Click);
             // 
             // commentator2Subtext
             // 

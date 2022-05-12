@@ -88,5 +88,28 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             player2Flag.SelectedItem = tempFlag; 
             player2Logo.SelectedItem = tempLogo;
         }
+
+        // SWAP BUTTON ON CLICK (COMMENTARY)
+        private void commentatorSwapButton_Click(object sender, EventArgs e)
+        {
+            String tempName = commentator1Name.Text;
+            String tempSubtext = commentator1Subtext.Text;
+
+            commentator1Name.Text = commentator2Name.Text;
+            commentator1Subtext.Text = commentator2Subtext.Text;
+
+            commentator2Name.Text = tempName;
+            commentator2Subtext.Text = tempSubtext;
+        }
+
+        // SWAP BUTTON ON CLICK (EXTRA LOGO)
+        private void extraLogoSwap_Click(object sender, EventArgs e)
+        {
+            object tempLogo = player1ExtraLogo.SelectedItem;
+
+            player1ExtraLogo.SelectedItem = player2ExtraLogo.SelectedItem;
+
+            player2ExtraLogo.SelectedItem = tempLogo;
+        }
     }
 }
