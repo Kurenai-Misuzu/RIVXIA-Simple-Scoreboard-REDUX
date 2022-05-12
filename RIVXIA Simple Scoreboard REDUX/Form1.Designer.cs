@@ -175,6 +175,7 @@
             this.player2Logo.Name = "player2Logo";
             this.player2Logo.Size = new System.Drawing.Size(204, 23);
             this.player2Logo.TabIndex = 18;
+            this.player2Logo.Tag = "Player 2 Logo";
             this.player2Logo.Text = "Player 2 Logo";
             // 
             // player1Logo
@@ -184,6 +185,7 @@
             this.player1Logo.Name = "player1Logo";
             this.player1Logo.Size = new System.Drawing.Size(204, 23);
             this.player1Logo.TabIndex = 17;
+            this.player1Logo.Tag = "Player 1 Logo";
             this.player1Logo.Text = "Player 1 Logo";
             // 
             // additionsSwapButton
@@ -203,6 +205,7 @@
             this.player2Flag.Name = "player2Flag";
             this.player2Flag.Size = new System.Drawing.Size(204, 23);
             this.player2Flag.TabIndex = 16;
+            this.player2Flag.Tag = "Player 2 Country / State";
             this.player2Flag.Text = "Player 2 Country / State";
             // 
             // player1Flag
@@ -212,6 +215,7 @@
             this.player1Flag.Name = "player1Flag";
             this.player1Flag.Size = new System.Drawing.Size(204, 23);
             this.player1Flag.TabIndex = 15;
+            this.player1Flag.Tag = "Player 1 Country / State";
             this.player1Flag.Text = "Player 1 Country / State";
             // 
             // player2CharacterSelect
@@ -221,6 +225,7 @@
             this.player2CharacterSelect.Name = "player2CharacterSelect";
             this.player2CharacterSelect.Size = new System.Drawing.Size(204, 23);
             this.player2CharacterSelect.TabIndex = 14;
+            this.player2CharacterSelect.Tag = "Player 2 Character";
             this.player2CharacterSelect.Text = "Player 2 Character";
             // 
             // player1CharacterSelect
@@ -230,6 +235,7 @@
             this.player1CharacterSelect.Name = "player1CharacterSelect";
             this.player1CharacterSelect.Size = new System.Drawing.Size(204, 23);
             this.player1CharacterSelect.TabIndex = 13;
+            this.player1CharacterSelect.Tag = "Player 1 Character";
             this.player1CharacterSelect.Text = "Player 1 Character";
             // 
             // gameSelector
@@ -239,6 +245,7 @@
             this.gameSelector.Name = "gameSelector";
             this.gameSelector.Size = new System.Drawing.Size(507, 23);
             this.gameSelector.TabIndex = 12;
+            this.gameSelector.Tag = "Select Game Being Played";
             this.gameSelector.Text = "Select Game Being Played";
             this.gameSelector.SelectedIndexChanged += new System.EventHandler(this.gameSelector_SelectedIndexChanged);
             // 
@@ -282,6 +289,7 @@
             this.player2Subtext.Name = "player2Subtext";
             this.player2Subtext.Size = new System.Drawing.Size(158, 23);
             this.player2Subtext.TabIndex = 5;
+            this.player2Subtext.Tag = "Player 2 Subtext";
             this.player2Subtext.Text = "Player 2 Subtext";
             // 
             // player1Subtext
@@ -290,6 +298,7 @@
             this.player1Subtext.Name = "player1Subtext";
             this.player1Subtext.Size = new System.Drawing.Size(158, 23);
             this.player1Subtext.TabIndex = 4;
+            this.player1Subtext.Tag = "Player 1 Subtext";
             this.player1Subtext.Text = "Player 1 Subtext";
             // 
             // essentialSwapButton
@@ -308,6 +317,7 @@
             this.set.Name = "set";
             this.set.Size = new System.Drawing.Size(507, 23);
             this.set.TabIndex = 6;
+            this.set.Tag = "Set";
             this.set.Text = "Set";
             // 
             // player2Score
@@ -316,6 +326,7 @@
             this.player2Score.Name = "player2Score";
             this.player2Score.Size = new System.Drawing.Size(40, 23);
             this.player2Score.TabIndex = 3;
+            this.player2Score.Tag = "0";
             // 
             // player1Score
             // 
@@ -323,13 +334,16 @@
             this.player1Score.Name = "player1Score";
             this.player1Score.Size = new System.Drawing.Size(40, 23);
             this.player1Score.TabIndex = 2;
+            this.player1Score.Tag = "0";
             // 
             // player2Name
             // 
+            this.player2Name.BackColor = System.Drawing.SystemColors.Window;
             this.player2Name.Location = new System.Drawing.Point(355, 36);
             this.player2Name.Name = "player2Name";
             this.player2Name.Size = new System.Drawing.Size(158, 23);
             this.player2Name.TabIndex = 1;
+            this.player2Name.Tag = "Player 2 Name";
             this.player2Name.Text = "Player 2 Name";
             // 
             // player1Name
@@ -338,6 +352,7 @@
             this.player1Name.Name = "player1Name";
             this.player1Name.Size = new System.Drawing.Size(158, 23);
             this.player1Name.TabIndex = 0;
+            this.player1Name.Tag = "Player 1 Name";
             this.player1Name.Text = "Player 1 Name";
             // 
             // scoreboardExtrasTab
@@ -373,6 +388,7 @@
             this.miscText2.Name = "miscText2";
             this.miscText2.Size = new System.Drawing.Size(507, 23);
             this.miscText2.TabIndex = 18;
+            this.miscText2.Tag = "Misc Text 2";
             this.miscText2.Text = "Misc Text 2";
             // 
             // miscText1
@@ -381,6 +397,7 @@
             this.miscText1.Name = "miscText1";
             this.miscText1.Size = new System.Drawing.Size(507, 23);
             this.miscText1.TabIndex = 17;
+            this.miscText1.Tag = "Misc Text 1";
             this.miscText1.Text = "Misc Text 1";
             // 
             // miscTextBoxesDivider
@@ -409,6 +426,7 @@
             this.player2ExtraLogo.Name = "player2ExtraLogo";
             this.player2ExtraLogo.Size = new System.Drawing.Size(204, 23);
             this.player2ExtraLogo.TabIndex = 14;
+            this.player2ExtraLogo.Tag = "Player 2 Extra Logo";
             this.player2ExtraLogo.Text = "Player 2 Extra Logo";
             // 
             // player1ExtraLogo
@@ -418,6 +436,7 @@
             this.player1ExtraLogo.Name = "player1ExtraLogo";
             this.player1ExtraLogo.Size = new System.Drawing.Size(204, 23);
             this.player1ExtraLogo.TabIndex = 13;
+            this.player1ExtraLogo.Tag = "Player 1 Extra Logo";
             this.player1ExtraLogo.Text = "Player 1 Extra Logo";
             // 
             // extraLogoSwap
@@ -437,6 +456,7 @@
             this.extraLogoSelector.Name = "extraLogoSelector";
             this.extraLogoSelector.Size = new System.Drawing.Size(507, 23);
             this.extraLogoSelector.TabIndex = 9;
+            this.extraLogoSelector.Tag = "Extra Logo Select";
             this.extraLogoSelector.Text = "Extra Logo Select";
             this.extraLogoSelector.SelectedIndexChanged += new System.EventHandler(this.extraLogoSelector_SelectedIndexChanged);
             // 
@@ -474,6 +494,7 @@
             this.commentator2Subtext.Name = "commentator2Subtext";
             this.commentator2Subtext.Size = new System.Drawing.Size(204, 23);
             this.commentator2Subtext.TabIndex = 5;
+            this.commentator2Subtext.Tag = "Commentator 2 Subtext";
             this.commentator2Subtext.Text = "Commentator 2 Subtext";
             // 
             // commentator2Name
@@ -482,6 +503,7 @@
             this.commentator2Name.Name = "commentator2Name";
             this.commentator2Name.Size = new System.Drawing.Size(204, 23);
             this.commentator2Name.TabIndex = 4;
+            this.commentator2Name.Tag = "Commentator 2";
             this.commentator2Name.Text = "Commentator 2";
             // 
             // commentator1Subtext
@@ -490,6 +512,7 @@
             this.commentator1Subtext.Name = "commentator1Subtext";
             this.commentator1Subtext.Size = new System.Drawing.Size(204, 23);
             this.commentator1Subtext.TabIndex = 3;
+            this.commentator1Subtext.Tag = "Commentator 1 Subtext";
             this.commentator1Subtext.Text = "Commentator 1 Subtext";
             // 
             // commentator1Name
@@ -498,6 +521,7 @@
             this.commentator1Name.Name = "commentator1Name";
             this.commentator1Name.Size = new System.Drawing.Size(204, 23);
             this.commentator1Name.TabIndex = 2;
+            this.commentator1Name.Tag = "Commentator 1";
             this.commentator1Name.Text = "Commentator 1";
             // 
             // commentaryLabelDivider
@@ -925,6 +949,7 @@
             this.losersRO4.Name = "losersRO4";
             this.losersRO4.Size = new System.Drawing.Size(95, 23);
             this.losersRO4.TabIndex = 7;
+            this.losersRO4.Tag = "Player 8";
             this.losersRO4.Text = "Player 8";
             // 
             // losersRO3
@@ -933,6 +958,7 @@
             this.losersRO3.Name = "losersRO3";
             this.losersRO3.Size = new System.Drawing.Size(95, 23);
             this.losersRO3.TabIndex = 6;
+            this.losersRO3.Tag = "Player 7";
             this.losersRO3.Text = "Player 7";
             // 
             // losersRO2
@@ -941,6 +967,7 @@
             this.losersRO2.Name = "losersRO2";
             this.losersRO2.Size = new System.Drawing.Size(95, 23);
             this.losersRO2.TabIndex = 5;
+            this.losersRO2.Tag = "Player 6";
             this.losersRO2.Text = "Player 6";
             // 
             // losersRO1
@@ -949,6 +976,7 @@
             this.losersRO1.Name = "losersRO1";
             this.losersRO1.Size = new System.Drawing.Size(95, 23);
             this.losersRO1.TabIndex = 4;
+            this.losersRO1.Tag = "Player 5";
             this.losersRO1.Text = "Player 5";
             // 
             // winnersSemis4
@@ -957,6 +985,7 @@
             this.winnersSemis4.Name = "winnersSemis4";
             this.winnersSemis4.Size = new System.Drawing.Size(95, 23);
             this.winnersSemis4.TabIndex = 3;
+            this.winnersSemis4.Tag = "Player 4";
             this.winnersSemis4.Text = "Player 4";
             // 
             // winnersSemis3
@@ -965,6 +994,7 @@
             this.winnersSemis3.Name = "winnersSemis3";
             this.winnersSemis3.Size = new System.Drawing.Size(95, 23);
             this.winnersSemis3.TabIndex = 2;
+            this.winnersSemis3.Tag = "Player 3";
             this.winnersSemis3.Text = "Player 3";
             // 
             // winnersSemis2
@@ -973,6 +1003,7 @@
             this.winnersSemis2.Name = "winnersSemis2";
             this.winnersSemis2.Size = new System.Drawing.Size(95, 23);
             this.winnersSemis2.TabIndex = 1;
+            this.winnersSemis2.Tag = "Player 2";
             this.winnersSemis2.Text = "Player 2";
             // 
             // winnersSemis1
@@ -981,6 +1012,7 @@
             this.winnersSemis1.Name = "winnersSemis1";
             this.winnersSemis1.Size = new System.Drawing.Size(95, 23);
             this.winnersSemis1.TabIndex = 0;
+            this.winnersSemis1.Tag = "Player 1";
             this.winnersSemis1.Text = "Player 1";
             // 
             // Scoreboard

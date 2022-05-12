@@ -52,7 +52,7 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         }
 
         // INITIALIZATION /////////////////////////////////////////////////////////////////////////
-        public Scoreboard()
+        public Scoreboard() 
         {
             InitializeComponent();
             ReadBaseFolders();
