@@ -2,21 +2,64 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
 {
     public partial class Scoreboard : Form
     {
+        // methods 
+        public void ReadBaseFolders()
+        {
+            // read out the list of games and put it into the game selector
+            String[] directories;
+            String gamesFolder = "Games";
+            directories = Directory.GetDirectories(gamesFolder);
+            foreach (String directory in directories)
+            {
+                String gameString = directory;
+                gameString = gameString.Remove(0, gamesFolder.Length + 1);
+                gameSelector.Items.Add(gameString);
+            }
+
+            // read out the list of flags and put it into the flag selector
+            String flagsFolder = "Flags";
+            directories = Directory.GetFiles(flagsFolder);
+            foreach (String flag in directories)
+            {
+                String flagString = flag;
+                flagString = flagString.Remove(0, flagsFolder.Length + 1);
+                flagString = flagString.Remove(flagString.LastIndexOf('.'));
+                player1Flag.Items.Add(flagString);
+                player2Flag.Items.Add(flagString);
+            }
+
+            // read out the list of logos and put it into the logo selector
+            String logosFolder = "Logos";
+            directories = Directory.GetFiles(logosFolder);
+            foreach (String logos in directories)
+            {
+                String logosString = logos;
+                logosString = logosString.Remove(0, logosFolder.Length + 1);
+                logosString = logosString.Remove(logosString.LastIndexOf('.'));
+                player1Logo.Items.Add(logosString);
+                player2Logo.Items.Add(logosString);
+            }
+
+            // read out the list of extra logos and put it into the logo selector
+            String extraLogosFolder = "Extra Logos";
+            directories = Directory.GetDirectories(extraLogosFolder);
+            foreach (String extraLogos in directories)
+            {
+                String extraLogosString = extraLogos;
+                extraLogosString = extraLogosString.Remove(0, extraLogosFolder.Length + 1);
+                extraLogoSelector.Items.Add(extraLogosString);
+            }
+        }
+
         public Scoreboard()
         {
             InitializeComponent();
-            // read out the list of games
-            // read out the list of flags
-            // read out the list of logos
-
-            // put add those items to their respective combo boxes
-
-            // read the character files in each one
+            ReadBaseFolders();
         }
 
         // SWAP BUTTON ON CLICK (ESSENTIAL)
         private void essentialSwapButton_Click(object sender, EventArgs e)
-        {
+        { 
             String tempName = player1Name.Text;
             String tempSubtext = player1Subtext.Text;
             decimal tempScore = player1Score.Value;
