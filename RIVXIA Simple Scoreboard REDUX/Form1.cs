@@ -2,7 +2,7 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
 {
     public partial class Scoreboard : Form
     {
-        // methods 
+        // METHODS ////////////////////////////////////////////////////////////////////////////////
         public void ReadBaseFolders()
         {
             // read out the list of games and put it into the game selector
@@ -51,11 +51,14 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             }
         }
 
+        // INITIALIZATION /////////////////////////////////////////////////////////////////////////
         public Scoreboard()
         {
             InitializeComponent();
             ReadBaseFolders();
         }
+
+        // SWAP BUTTONS ///////////////////////////////////////////////////////////////////////////
 
         // SWAP BUTTON ON CLICK (ESSENTIAL)
         private void essentialSwapButton_Click(object sender, EventArgs e)
@@ -110,6 +113,40 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             player1ExtraLogo.SelectedItem = player2ExtraLogo.SelectedItem;
 
             player2ExtraLogo.SelectedItem = tempLogo;
+        }
+
+
+
+        // READING SUBFOLDERS BASED ON GAMES / LOGOS //////////////////////////////////////////////
+
+        private void gameSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String gamesDirectory = "Games/";
+            gamesDirectory += gameSelector.SelectedItem.ToString();
+            String[] charactersList = Directory.GetFiles(gamesDirectory);
+            foreach (String character in charactersList)
+            {
+                String characterString = character;
+                characterString = characterString.Remove(0, gamesDirectory.Length + 1);
+                characterString = characterString.Remove(characterString.LastIndexOf('.')) ;
+                player1CharacterSelect.Items.Add(characterString);
+                player2CharacterSelect.Items.Add(characterString);    
+            }
+        }
+
+        private void extraLogoSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String extraLogoDirectory = "Extra Logos/";
+            extraLogoDirectory += extraLogoSelector.SelectedItem.ToString();
+            String[] logosList = Directory.GetFiles(extraLogoDirectory);
+            foreach (String logos in logosList)
+            {
+                String logosString = logos;
+                logosString = logosString.Remove(0, extraLogoDirectory.Length + 1);
+                logosString = logosString.Remove(logosString.LastIndexOf('.'));
+                player1ExtraLogo.Items.Add(logosString);
+                player2ExtraLogo.Items.Add(logosString);
+            }
         }
     }
 }

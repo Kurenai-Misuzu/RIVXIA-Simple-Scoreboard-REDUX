@@ -240,6 +240,7 @@
             this.gameSelector.Size = new System.Drawing.Size(507, 23);
             this.gameSelector.TabIndex = 12;
             this.gameSelector.Text = "Select Game Being Played";
+            this.gameSelector.SelectedIndexChanged += new System.EventHandler(this.gameSelector_SelectedIndexChanged);
             // 
             // scoreboardAdditionsDivider
             // 
@@ -437,6 +438,7 @@
             this.extraLogoSelector.Size = new System.Drawing.Size(507, 23);
             this.extraLogoSelector.TabIndex = 9;
             this.extraLogoSelector.Text = "Extra Logo Select";
+            this.extraLogoSelector.SelectedIndexChanged += new System.EventHandler(this.extraLogoSelector_SelectedIndexChanged);
             // 
             // extraLogoDivider
             // 
