@@ -119,6 +119,8 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
 
         private void gameSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
+            player1CharacterSelect.Items.Clear();
+            player2CharacterSelect.Items.Clear();
             String gamesDirectory = "Games/";
             gamesDirectory += gameSelector.SelectedItem.ToString();
             String[] charactersList = Directory.GetFiles(gamesDirectory);
@@ -134,6 +136,8 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
 
         private void extraLogoSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
+            player1ExtraLogo.Items.Clear();
+            player2ExtraLogo.Items.Clear();
             String extraLogoDirectory = "Extra Logos/";
             extraLogoDirectory += extraLogoSelector.SelectedItem.ToString();
             String[] logosList = Directory.GetFiles(extraLogoDirectory);
@@ -145,6 +149,33 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
                 player1ExtraLogo.Items.Add(logosString);
                 player2ExtraLogo.Items.Add(logosString);
             }
+        }
+
+        // BOTTOM BUTTONS (SETTINGS, ABOUT, RESET, UPDATE) ////////////////////////////////////////
+        
+        // SETTINGS
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            Settings settings = new Settings();
+            settings.ShowDialog();
+        }
+
+        // ABOUT
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            // open the about menu
+        }
+
+        // RESET
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            // reset
+        }
+
+        // UPDATE
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            // update
         }
     }
 }

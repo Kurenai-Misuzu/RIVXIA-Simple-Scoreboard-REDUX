@@ -1027,6 +1027,7 @@
             this.updateButton.TabIndex = 4;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // settingsButton
             // 
@@ -1036,6 +1037,7 @@
             this.settingsButton.TabIndex = 1;
             this.settingsButton.Text = "Settings";
             this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // resetButton
             // 
@@ -1045,6 +1047,7 @@
             this.resetButton.TabIndex = 3;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // aboutButton
             // 
@@ -1054,6 +1057,7 @@
             this.aboutButton.TabIndex = 2;
             this.aboutButton.Text = "About";
             this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // Scoreboard
             // 
