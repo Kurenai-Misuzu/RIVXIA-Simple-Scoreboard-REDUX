@@ -118,6 +118,10 @@
             this.winnersSemis3 = new System.Windows.Forms.TextBox();
             this.winnersSemis2 = new System.Windows.Forms.TextBox();
             this.winnersSemis1 = new System.Windows.Forms.TextBox();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.aboutButton = new System.Windows.Forms.Button();
             this.scoreboardTabController.SuspendLayout();
             this.mainScoreboardTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player2Score)).BeginInit();
@@ -1015,11 +1019,51 @@
             this.winnersSemis1.Tag = "Player 1";
             this.winnersSemis1.Text = "Player 1";
             // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(461, 327);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(75, 23);
+            this.updateButton.TabIndex = 4;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            // 
+            // settingsButton
+            // 
+            this.settingsButton.Location = new System.Drawing.Point(16, 327);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(75, 23);
+            this.settingsButton.TabIndex = 1;
+            this.settingsButton.Text = "Settings";
+            this.settingsButton.UseVisualStyleBackColor = true;
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(380, 327);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 3;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            // 
+            // aboutButton
+            // 
+            this.aboutButton.Location = new System.Drawing.Point(97, 327);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(75, 23);
+            this.aboutButton.TabIndex = 2;
+            this.aboutButton.Text = "About";
+            this.aboutButton.UseVisualStyleBackColor = true;
+            // 
             // Scoreboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 361);
+            this.Controls.Add(this.aboutButton);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.settingsButton);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.scoreboardTabController);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Scoreboard";
@@ -1167,5 +1211,9 @@
         private Label miscTextBoxesDivider;
         private TextBox miscText2;
         private TextBox miscText1;
+        private Button updateButton;
+        private Button settingsButton;
+        private Button resetButton;
+        private Button aboutButton;
     }
 }
