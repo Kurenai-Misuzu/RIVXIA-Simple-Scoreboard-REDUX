@@ -163,7 +163,8 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         // ABOUT
         private void aboutButton_Click(object sender, EventArgs e)
         {
-            // open the about menu
+            About about = new About();
+            about.ShowDialog();
         }
 
         // RESET

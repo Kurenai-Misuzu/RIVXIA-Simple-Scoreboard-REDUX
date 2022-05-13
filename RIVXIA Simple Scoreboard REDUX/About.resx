@@ -57,4 +57,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutAboutText.Text" xml:space="preserve">
+    <value>An updated version of the RIVXIA Simple
+Scoreboard.
+This program is primarily designed to allow
+a user to easily update a fighting game or
+Smash bros. overlay on a livestream.
+The program works by writing the input fields
+into their own .txt files that can be imported
+into streaming software such as OBS.</value>
+  </data>
 </root>
