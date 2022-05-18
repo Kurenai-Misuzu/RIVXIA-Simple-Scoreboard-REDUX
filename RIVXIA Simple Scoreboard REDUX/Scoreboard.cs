@@ -3,7 +3,7 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
     public partial class Scoreboard : Form
     {
         // METHODS ////////////////////////////////////////////////////////////////////////////////
-        public void ReadBaseFolders()
+        private void ReadBaseFolders()
         {
             // read out the list of games and put it into the game selector
             String[] directories;
@@ -19,6 +19,7 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             // read out the list of flags and put it into the flag selector
             String flagsFolder = "Flags";
             directories = Directory.GetFiles(flagsFolder);
+            System.IO.File.WriteAllLines("./Flags.txt", directories);
             foreach (String flag in directories)
             {
                 String flagString = flag;
@@ -31,6 +32,7 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             // read out the list of logos and put it into the logo selector
             String logosFolder = "Logos";
             directories = Directory.GetFiles(logosFolder);
+            System.IO.File.WriteAllLines("./Logos.txt", directories);
             foreach (String logos in directories)
             {
                 String logosString = logos;
@@ -43,12 +45,29 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             // read out the list of extra logos and put it into the logo selector
             String extraLogosFolder = "Extra Logos";
             directories = Directory.GetDirectories(extraLogosFolder);
+            System.IO.File.WriteAllLines("./Extra Logos.txt", directories);
             foreach (String extraLogos in directories)
             {
                 String extraLogosString = extraLogos;
                 extraLogosString = extraLogosString.Remove(0, extraLogosFolder.Length + 1);
                 extraLogoSelector.Items.Add(extraLogosString);
             }
+        }
+        private String GetCharacterPathFromIndex(int index)
+        {
+            String characterPath = System.IO.File.ReadLines("./Characters.txt").Skip(index).First();
+            return characterPath;
+        }
+        private String GetFlagPathFromIndex(int index)
+        {
+            String flagPath = System.IO.File.ReadLines("./Flags.txt").Skip(index).First() ;
+            return flagPath;
+        }
+
+        private String GetLogoPathFromIndex(int index)
+        {
+            String logoPath = System.IO.File.ReadLines("./Logos.txt").Skip(index).First();
+            return logoPath;
         }
 
         // INITIALIZATION /////////////////////////////////////////////////////////////////////////
@@ -124,13 +143,14 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             String gamesDirectory = "Games/";
             gamesDirectory += gameSelector.SelectedItem.ToString();
             String[] charactersList = Directory.GetFiles(gamesDirectory);
+            System.IO.File.WriteAllLines("./Characters.txt", charactersList);
             foreach (String character in charactersList)
             {
                 String characterString = character;
                 characterString = characterString.Remove(0, gamesDirectory.Length + 1);
                 characterString = characterString.Remove(characterString.LastIndexOf('.')) ;
                 player1CharacterSelect.Items.Add(characterString);
-                player2CharacterSelect.Items.Add(characterString);    
+                player2CharacterSelect.Items.Add(characterString);
             }
         }
 
@@ -176,7 +196,19 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         // UPDATE
         private void updateButton_Click(object sender, EventArgs e)
         {
-            // update
+            System.IO.File.WriteAllText("Main Output/Player 1 Name.txt", player1Name.Text);
+            System.IO.File.WriteAllText("Main Output/Player 2 Name.txt", player2Name.Text);
+            System.IO.File.WriteAllText("Main Output/Player 1 Score.txt", player1Score.ToString());
+            System.IO.File.WriteAllText("Main Output/Player 2 Score.txt", player2Score.ToString());
+            System.IO.File.WriteAllText("Main Output/Set.txt", set.Text);
+
+            System.IO.File.WriteAllText("Main Output/Game.txt", gameSelector.Text);
+            System.IO.File.Copy(GetCharacterPathFromIndex(player1CharacterSelect.SelectedIndex), "Main Output/Player 1 Character.png", true);
+            System.IO.File.Copy(GetCharacterPathFromIndex(player2CharacterSelect.SelectedIndex), "Main Output/Player 2 Character.png", true);
+            System.IO.File.Copy(GetFlagPathFromIndex(player1Flag.SelectedIndex), "Main Output/Player 1 Flag.png", true);
+            System.IO.File.Copy(GetFlagPathFromIndex(player2Flag.SelectedIndex), "Main Output/Player 2 Flag.png", true);
+            System.IO.File.Copy(GetLogoPathFromIndex(player1Logo.SelectedIndex), "Main Output/Player 1 Logo.png", true);
+            System.IO.File.Copy(GetLogoPathFromIndex(player2Logo.SelectedIndex), "Main Output/Player 2 Logo.png", true);
         }
     }
 }
