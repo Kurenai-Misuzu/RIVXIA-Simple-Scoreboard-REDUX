@@ -9,6 +9,7 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             String[] directories;
             String gamesFolder = "Games";
             directories = Directory.GetDirectories(gamesFolder);
+            System.IO.File.WriteAllLines("./Characters.txt", directories);
             foreach (String directory in directories)
             {
                 String gameString = directory;
@@ -68,6 +69,12 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         {
             String logoPath = System.IO.File.ReadLines("./Logos.txt").Skip(index).First();
             return logoPath;
+        }
+
+        private String GetExtraPathFromIndex(int index)
+        {
+            String extraPath = System.IO.File.ReadLines("./Extra Logos.txt").Skip(index).First();
+            return extraPath;
         }
 
         // INITIALIZATION /////////////////////////////////////////////////////////////////////////
@@ -196,6 +203,8 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         // UPDATE
         private void updateButton_Click(object sender, EventArgs e)
         {
+
+            // MAIN SCOREBOARD
             System.IO.File.WriteAllText("Main Output/Player 1 Name.txt", player1Name.Text);
             System.IO.File.WriteAllText("Main Output/Player 2 Name.txt", player2Name.Text);
             System.IO.File.WriteAllText("Main Output/Player 1 Score.txt", player1Score.ToString());
@@ -203,12 +212,34 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             System.IO.File.WriteAllText("Main Output/Set.txt", set.Text);
 
             System.IO.File.WriteAllText("Main Output/Game.txt", gameSelector.Text);
-            System.IO.File.Copy(GetCharacterPathFromIndex(player1CharacterSelect.SelectedIndex), "Main Output/Player 1 Character.png", true);
-            System.IO.File.Copy(GetCharacterPathFromIndex(player2CharacterSelect.SelectedIndex), "Main Output/Player 2 Character.png", true);
-            System.IO.File.Copy(GetFlagPathFromIndex(player1Flag.SelectedIndex), "Main Output/Player 1 Flag.png", true);
-            System.IO.File.Copy(GetFlagPathFromIndex(player2Flag.SelectedIndex), "Main Output/Player 2 Flag.png", true);
-            System.IO.File.Copy(GetLogoPathFromIndex(player1Logo.SelectedIndex), "Main Output/Player 1 Logo.png", true);
-            System.IO.File.Copy(GetLogoPathFromIndex(player2Logo.SelectedIndex), "Main Output/Player 2 Logo.png", true);
+            if (player1CharacterSelect.SelectedIndex != -1 || player2CharacterSelect.SelectedIndex != -1)
+            {
+                System.IO.File.Copy(GetCharacterPathFromIndex(player1CharacterSelect.SelectedIndex), "Main Output/Player 1 Character.png", true);
+                System.IO.File.Copy(GetCharacterPathFromIndex(player2CharacterSelect.SelectedIndex), "Main Output/Player 2 Character.png", true);
+            }
+            if (player1Flag.SelectedIndex != -1 || player2Flag.SelectedIndex != -1)
+            {
+                System.IO.File.Copy(GetFlagPathFromIndex(player1Flag.SelectedIndex), "Main Output/Player 1 Flag.png", true);
+                System.IO.File.Copy(GetFlagPathFromIndex(player2Flag.SelectedIndex), "Main Output/Player 2 Flag.png", true);    
+            }
+            if (player1Logo.SelectedIndex != -1 || player2Logo.SelectedIndex != -1)
+            {
+                System.IO.File.Copy(GetLogoPathFromIndex(player1Logo.SelectedIndex), "Main Output/Player 1 Logo.png", true);
+                System.IO.File.Copy(GetLogoPathFromIndex(player2Logo.SelectedIndex), "Main Output/Player 2 Logo.png", true);
+            }
+
+            // SCOREBOARD EXTRAS
+            System.IO.File.WriteAllText("Extra Output/Commentator 1 Name.txt", commentator1Name.Text);
+            System.IO.File.WriteAllText("Extra Output/Commentator 2 Name.txt", commentator2Name.Text);
+            System.IO.File.WriteAllText("Extra Output/Commentator 1 Subtext.txt", commentator1Subtext.Text);
+            System.IO.File.WriteAllText("Extra Output/Commentator 2 Subtext.txt", commentator2Subtext.Text);
+            if (player1ExtraLogo.SelectedIndex != -1 || player2ExtraLogo.SelectedIndex != -1)
+            {
+                System.IO.File.Copy(GetExtraPathFromIndex(player1ExtraLogo.SelectedIndex), "Extra Output/Player 1 Extra Logo.png", true);
+                System.IO.File.Copy(GetExtraPathFromIndex(player2ExtraLogo.SelectedIndex), "Extra Output/Player 2 Extra Logo.png", true);
+            }
+            System.IO.File.WriteAllText("Extra Output/Misc Text 1.txt", miscText1.Text);
+            System.IO.File.WriteAllText("Extra Output/Misc Text 2.txt", miscText2.Text);
         }
     }
 }
