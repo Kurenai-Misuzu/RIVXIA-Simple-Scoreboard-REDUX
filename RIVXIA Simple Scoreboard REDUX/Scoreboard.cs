@@ -240,6 +240,29 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             }
             System.IO.File.WriteAllText("Extra Output/Misc Text 1.txt", miscText1.Text);
             System.IO.File.WriteAllText("Extra Output/Misc Text 2.txt", miscText2.Text);
+
+            // TOP 8 BRACKET
+            System.IO.File.WriteAllText("Bracket Output/Winners Semis 1.txt", winnersSemis1.Text);
+            System.IO.File.WriteAllText("Bracket Output/Winners Semis 2.txt", winnersSemis2.Text);
+            System.IO.File.WriteAllText("Bracket Output/Winners Semis 3.txt", winnersSemis3.Text);
+            System.IO.File.WriteAllText("Bracket Output/Winners Semis 4.txt", winnersSemis4.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Round One 1.txt", losersRO1.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Round One 2.txt", losersRO2.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Round One 3.txt", losersRO3.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Round One 4.txt", losersRO4.Text);
+            System.IO.File.WriteAllText("Bracket Output/Winners Finals 1.txt", winnersFinals1.Text);
+            System.IO.File.WriteAllText("Bracket Output/Winners Finals 2.txt", winnersFinals2.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Quarters 1.txt", losersQuarters1.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Quarters 2.txt", losersQuarters2.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Quarters 3.txt", losersQuarters3.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Quarters 4.txt", losersQuarters4.Text);
+            System.IO.File.WriteAllText("Bracket Output/Grand Finals 1.txt", grandFinals1.Text);
+            System.IO.File.WriteAllText("Bracket Output/Grand Finals 2.txt", grandFinals2.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Finals 1.txt", losersSemis1.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Finals 2.txt", losersSemis2.Text);
+            System.IO.File.WriteAllText("Bracket Output/Tournament Winner.txt", finalWinner.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Finals 1.txt", losersFinals1.Text);
+            System.IO.File.WriteAllText("Bracket Output/Losers Finals 2.txt", losersFinals2.Text);
         }
     }
 }
