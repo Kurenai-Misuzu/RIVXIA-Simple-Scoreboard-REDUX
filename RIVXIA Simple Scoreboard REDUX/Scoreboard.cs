@@ -64,13 +64,11 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             String flagPath = System.IO.File.ReadLines("./Flags.txt").Skip(index).First() ;
             return flagPath;
         }
-
         private String GetLogoPathFromIndex(int index)
         {
             String logoPath = System.IO.File.ReadLines("./Logos.txt").Skip(index).First();
             return logoPath;
         }
-
         private String GetExtraPathFromIndex(int index)
         {
             String extraPath = System.IO.File.ReadLines("./Extra Logos.txt").Skip(index).First();
@@ -332,6 +330,106 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             System.IO.File.WriteAllText("Bracket Output/Tournament Winner.txt", finalWinner.Text);
             System.IO.File.WriteAllText("Bracket Output/Losers Finals 1.txt", losersFinals1.Text);
             System.IO.File.WriteAllText("Bracket Output/Losers Finals 2.txt", losersFinals2.Text);
+        }
+
+        // BRACKET BUTTONS ////////////////////////////////////////////////////////////////////////
+        
+        
+        // COLUMN 1 
+        private void winnersSemis1W_Click(object sender, EventArgs e)
+        {
+            winnersFinals1.Text = winnersSemis1.Text;
+            losersQuarters3.Text = winnersSemis2.Text;
+        }
+        private void winnersSemis2W_Click(object sender, EventArgs e)
+        {
+            winnersFinals1.Text = winnersSemis2.Text;
+            losersQuarters3.Text = winnersSemis1.Text;
+        }
+        private void winnersSemis3W_Click(object sender, EventArgs e)
+        {
+            winnersFinals2.Text = winnersSemis3.Text;
+            losersQuarters1.Text = winnersSemis4.Text;
+        }
+        private void winnersSemis4W_Click(object sender, EventArgs e)
+        {
+            winnersFinals2.Text = winnersSemis4.Text;
+            losersQuarters1.Text = winnersSemis3.Text;
+        }
+        private void losersRO1W_Click(object sender, EventArgs e)
+        {
+            losersQuarters2.Text = losersRO1.Text;
+        }
+        private void losersRO2W_Click(object sender, EventArgs e)
+        {
+            losersQuarters2.Text = losersRO2.Text;
+        }
+        private void losersRO3W_Click(object sender, EventArgs e)
+        {
+            losersQuarters4.Text = losersRO3.Text;
+        }
+        private void losersRO4W_Click(object sender, EventArgs e)
+        {
+            losersQuarters4.Text = losersRO4.Text;
+        }
+
+
+        // COLUMN 2
+        private void winnersFinals1W_Click(object sender, EventArgs e)
+        {
+            grandFinals1.Text = winnersFinals1.Text;
+            losersFinals1.Text = winnersFinals2.Text;
+        }
+        private void winnersFinals2W_Click(object sender, EventArgs e)
+        {
+            grandFinals1.Text = winnersFinals2.Text;
+            losersFinals1.Text = winnersFinals1.Text;
+        }
+        private void losersQuarters1W_Click(object sender, EventArgs e)
+        {
+            losersSemis1.Text = losersQuarters1.Text;
+        }
+        private void losersQuarters2W_Click(object sender, EventArgs e)
+        {
+            losersSemis1.Text = losersQuarters2.Text;
+        }
+        private void losersQuarters3W_Click(object sender, EventArgs e)
+        {
+            losersSemis2.Text = losersQuarters3.Text;
+        }
+        private void losersQuarters4W_Click(object sender, EventArgs e)
+        {
+            losersSemis2.Text = losersQuarters4.Text;
+        }
+
+
+        //COLUMN 3
+        private void grandFinals1W_Click(object sender, EventArgs e)
+        {
+            finalWinner.Text = grandFinals1.Text;
+        }
+        private void grandFinals2W_Click(object sender, EventArgs e)
+        {
+            finalWinner.Text = grandFinals2.Text;
+        }
+        private void losersSemis1W_Click(object sender, EventArgs e)
+        {
+            losersFinals2.Text = losersSemis1.Text;
+        }
+        private void losersSemis2W_Click(object sender, EventArgs e)
+        {
+            losersFinals2.Text = losersSemis2.Text;
+        }
+
+
+        // COLUMN 4
+        private void losersFinals1W_Click(object sender, EventArgs e)
+        {
+            grandFinals2.Text = losersFinals1.Text;
+        }
+        private void losersFinals2W_Click(object sender, EventArgs e)
+        {
+            grandFinals2.Text = losersFinals2.Text;
         }
     }
 }

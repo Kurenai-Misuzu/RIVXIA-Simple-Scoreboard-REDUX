@@ -684,6 +684,7 @@
             this.losersFinals2W.TabIndex = 40;
             this.losersFinals2W.Text = ">";
             this.losersFinals2W.UseVisualStyleBackColor = true;
+            this.losersFinals2W.Click += new System.EventHandler(this.losersFinals2W_Click);
             // 
             // losersFinals1W
             // 
@@ -693,6 +694,7 @@
             this.losersFinals1W.TabIndex = 39;
             this.losersFinals1W.Text = ">";
             this.losersFinals1W.UseVisualStyleBackColor = true;
+            this.losersFinals1W.Click += new System.EventHandler(this.losersFinals1W_Click);
             // 
             // losersFinals2
             // 
@@ -723,6 +725,7 @@
             this.losersSemis2W.TabIndex = 35;
             this.losersSemis2W.Text = ">";
             this.losersSemis2W.UseVisualStyleBackColor = true;
+            this.losersSemis2W.Click += new System.EventHandler(this.losersSemis2W_Click);
             // 
             // losersSemis1W
             // 
@@ -732,6 +735,7 @@
             this.losersSemis1W.TabIndex = 34;
             this.losersSemis1W.Text = ">";
             this.losersSemis1W.UseVisualStyleBackColor = true;
+            this.losersSemis1W.Click += new System.EventHandler(this.losersSemis1W_Click);
             // 
             // grandFinals2W
             // 
@@ -741,6 +745,7 @@
             this.grandFinals2W.TabIndex = 33;
             this.grandFinals2W.Text = ">";
             this.grandFinals2W.UseVisualStyleBackColor = true;
+            this.grandFinals2W.Click += new System.EventHandler(this.grandFinals2W_Click);
             // 
             // grandFinals1W
             // 
@@ -750,6 +755,7 @@
             this.grandFinals1W.TabIndex = 32;
             this.grandFinals1W.Text = ">";
             this.grandFinals1W.UseVisualStyleBackColor = true;
+            this.grandFinals1W.Click += new System.EventHandler(this.grandFinals1W_Click);
             // 
             // losersSemis2
             // 
@@ -787,6 +793,7 @@
             this.losersQuarters4W.TabIndex = 27;
             this.losersQuarters4W.Text = ">";
             this.losersQuarters4W.UseVisualStyleBackColor = true;
+            this.losersQuarters4W.Click += new System.EventHandler(this.losersQuarters4W_Click);
             // 
             // losersQuarters3W
             // 
@@ -796,6 +803,7 @@
             this.losersQuarters3W.TabIndex = 26;
             this.losersQuarters3W.Text = ">";
             this.losersQuarters3W.UseVisualStyleBackColor = true;
+            this.losersQuarters3W.Click += new System.EventHandler(this.losersQuarters3W_Click);
             // 
             // losersQuarters2W
             // 
@@ -805,6 +813,7 @@
             this.losersQuarters2W.TabIndex = 25;
             this.losersQuarters2W.Text = ">";
             this.losersQuarters2W.UseVisualStyleBackColor = true;
+            this.losersQuarters2W.Click += new System.EventHandler(this.losersQuarters2W_Click);
             // 
             // losersQuarters1W
             // 
@@ -814,6 +823,7 @@
             this.losersQuarters1W.TabIndex = 24;
             this.losersQuarters1W.Text = ">";
             this.losersQuarters1W.UseVisualStyleBackColor = true;
+            this.losersQuarters1W.Click += new System.EventHandler(this.losersQuarters1W_Click);
             // 
             // winnersFinals2W
             // 
@@ -823,6 +833,7 @@
             this.winnersFinals2W.TabIndex = 23;
             this.winnersFinals2W.Text = ">";
             this.winnersFinals2W.UseVisualStyleBackColor = true;
+            this.winnersFinals2W.Click += new System.EventHandler(this.winnersFinals2W_Click);
             // 
             // winnersFinals1W
             // 
@@ -832,6 +843,7 @@
             this.winnersFinals1W.TabIndex = 22;
             this.winnersFinals1W.Text = ">";
             this.winnersFinals1W.UseVisualStyleBackColor = true;
+            this.winnersFinals1W.Click += new System.EventHandler(this.winnersFinals1W_Click);
             // 
             // losersQuarters4
             // 
@@ -883,6 +895,7 @@
             this.losersRO4W.TabIndex = 15;
             this.losersRO4W.Text = ">";
             this.losersRO4W.UseVisualStyleBackColor = true;
+            this.losersRO4W.Click += new System.EventHandler(this.losersRO4W_Click);
             // 
             // losersRO3W
             // 
@@ -892,6 +905,7 @@
             this.losersRO3W.TabIndex = 14;
             this.losersRO3W.Text = ">";
             this.losersRO3W.UseVisualStyleBackColor = true;
+            this.losersRO3W.Click += new System.EventHandler(this.losersRO3W_Click);
             // 
             // losersRO2W
             // 
@@ -901,6 +915,7 @@
             this.losersRO2W.TabIndex = 13;
             this.losersRO2W.Text = ">";
             this.losersRO2W.UseVisualStyleBackColor = true;
+            this.losersRO2W.Click += new System.EventHandler(this.losersRO2W_Click);
             // 
             // losersRO1W
             // 
@@ -910,6 +925,7 @@
             this.losersRO1W.TabIndex = 12;
             this.losersRO1W.Text = ">";
             this.losersRO1W.UseVisualStyleBackColor = true;
+            this.losersRO1W.Click += new System.EventHandler(this.losersRO1W_Click);
             // 
             // winnersSemis4W
             // 
@@ -919,6 +935,7 @@
             this.winnersSemis4W.TabIndex = 11;
             this.winnersSemis4W.Text = ">";
             this.winnersSemis4W.UseVisualStyleBackColor = true;
+            this.winnersSemis4W.Click += new System.EventHandler(this.winnersSemis4W_Click);
             // 
             // winnersSemis3W
             // 
@@ -928,6 +945,7 @@
             this.winnersSemis3W.TabIndex = 10;
             this.winnersSemis3W.Text = ">";
             this.winnersSemis3W.UseVisualStyleBackColor = true;
+            this.winnersSemis3W.Click += new System.EventHandler(this.winnersSemis3W_Click);
             // 
             // winnersSemis2W
             // 
@@ -937,6 +955,7 @@
             this.winnersSemis2W.TabIndex = 9;
             this.winnersSemis2W.Text = ">";
             this.winnersSemis2W.UseVisualStyleBackColor = true;
+            this.winnersSemis2W.Click += new System.EventHandler(this.winnersSemis2W_Click);
             // 
             // winnersSemis1W
             // 
@@ -946,6 +965,7 @@
             this.winnersSemis1W.TabIndex = 8;
             this.winnersSemis1W.Text = ">";
             this.winnersSemis1W.UseVisualStyleBackColor = true;
+            this.winnersSemis1W.Click += new System.EventHandler(this.winnersSemis1W_Click);
             // 
             // losersRO4
             // 
