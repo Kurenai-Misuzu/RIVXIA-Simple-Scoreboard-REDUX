@@ -147,17 +147,20 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         {
             player1CharacterSelect.Items.Clear();
             player2CharacterSelect.Items.Clear();
-            String gamesDirectory = "Games/";
-            gamesDirectory += gameSelector.SelectedItem.ToString();
-            String[] charactersList = Directory.GetFiles(gamesDirectory);
-            System.IO.File.WriteAllLines("./Characters.txt", charactersList);
-            foreach (String character in charactersList)
+            if (gameSelector.SelectedIndex != -1)
             {
-                String characterString = character;
-                characterString = characterString.Remove(0, gamesDirectory.Length + 1);
-                characterString = characterString.Remove(characterString.LastIndexOf('.')) ;
-                player1CharacterSelect.Items.Add(characterString);
-                player2CharacterSelect.Items.Add(characterString);
+                String gamesDirectory = "Games/";
+                gamesDirectory += gameSelector.SelectedItem.ToString();
+                String[] charactersList = Directory.GetFiles(gamesDirectory);
+                System.IO.File.WriteAllLines("./Characters.txt", charactersList);
+                foreach (String character in charactersList)
+                {
+                    String characterString = character;
+                    characterString = characterString.Remove(0, gamesDirectory.Length + 1);
+                    characterString = characterString.Remove(characterString.LastIndexOf('.'));
+                    player1CharacterSelect.Items.Add(characterString);
+                    player2CharacterSelect.Items.Add(characterString);
+                }
             }
         }
 
@@ -197,7 +200,29 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         // RESET
         private void resetButton_Click(object sender, EventArgs e)
         {
-            // reset
+            player1Name.Text = player1Name.Tag.ToString();
+            player2Name.Text = player2Name.Tag.ToString();
+            player1Score.Value = 0;
+            player2Score.Value = 0;
+            player1Subtext.Text = player1Subtext.Tag.ToString();
+            player2Subtext.Text = player2Subtext.Tag.ToString();
+            set.Text = set.Tag.ToString();
+
+
+            gameSelector.SelectedIndex = -1;
+            player1CharacterSelect.SelectedIndex = -1;
+            player2CharacterSelect.SelectedIndex = -1;
+            player1Flag.SelectedIndex = -1;
+            player2Flag.SelectedIndex = -1;
+            player1Logo.SelectedIndex = -1;
+            player2Logo.SelectedIndex = -1;
+            gameSelector.Text = gameSelector.Tag.ToString();
+            player1CharacterSelect.Text = player1CharacterSelect.Tag.ToString();
+            player2CharacterSelect.Text = player2CharacterSelect.Tag.ToString();
+            player1Flag.Text = player1Flag.Tag.ToString();
+            player2Flag.Text = player2Flag.Tag.ToString();
+            player1Logo.Text = player1Logo.Tag.ToString();
+            player2Logo.Text = player2Logo.Tag.ToString();
         }
 
         // UPDATE

@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir &quot;$(OutDir)Extra Logos&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Flags&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Games&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Logos&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Main Output&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Extra Output&quot;&#xD;&#xA;mkdir &quot;$(OutDir)Bracket Output&quot;" />
+    <Exec Command="mkdir -p &quot;$(OutDir)Extra Logos&quot;&#xD;&#xA;mkdir -p &quot;$(OutDir)Flags&quot;&#xD;&#xA;mkdir -p &quot;$(OutDir)Games&quot;&#xD;&#xA;mkdir -p &quot;$(OutDir)Logos&quot;&#xD;&#xA;mkdir -p &quot;$(OutDir)Main Output&quot;&#xD;&#xA;mkdir -p &quot;$(OutDir)Extra Output&quot;&#xD;&#xA;mkdir -p &quot;$(OutDir)Bracket Output&quot;" />
   </Target>
 
 </Project>
