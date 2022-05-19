@@ -244,6 +244,29 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
 
             miscText1.Text = miscText1.Tag.ToString();
             miscText2.Text = miscText2.Tag.ToString();
+
+            //TOP 8 BRACKET
+            winnersSemis1.Text = winnersSemis1.Tag.ToString();
+            winnersSemis2.Text = winnersSemis2.Tag.ToString();
+            winnersSemis3.Text = winnersSemis3.Tag.ToString();
+            winnersSemis4.Text = winnersSemis4.Tag.ToString();
+            losersRO1.Text = losersRO1.Tag.ToString();
+            losersRO2.Text = losersRO2.Tag.ToString();
+            losersRO3.Text = losersRO3.Tag.ToString();
+            losersRO4.Text = losersRO4.Tag.ToString();
+            winnersFinals1.Text = "";
+            winnersFinals2.Text = "";
+            losersQuarters1.Text = "";
+            losersQuarters2.Text = "";
+            losersQuarters3.Text = "";
+            losersQuarters4.Text = "";
+            grandFinals1.Text = "";
+            grandFinals2.Text = "";
+            losersSemis1.Text = "";
+            losersSemis2.Text = "";
+            finalWinner.Text = "";
+            losersFinals1.Text = "";
+            losersFinals2.Text = "";
         }
 
         // UPDATE
