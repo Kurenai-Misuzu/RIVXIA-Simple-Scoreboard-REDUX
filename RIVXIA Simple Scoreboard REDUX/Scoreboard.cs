@@ -168,16 +168,20 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         {
             player1ExtraLogo.Items.Clear();
             player2ExtraLogo.Items.Clear();
-            String extraLogoDirectory = "Extra Logos/";
-            extraLogoDirectory += extraLogoSelector.SelectedItem.ToString();
-            String[] logosList = Directory.GetFiles(extraLogoDirectory);
-            foreach (String logos in logosList)
+            if (extraLogoSelector.SelectedIndex != -1)
             {
-                String logosString = logos;
-                logosString = logosString.Remove(0, extraLogoDirectory.Length + 1);
-                logosString = logosString.Remove(logosString.LastIndexOf('.'));
-                player1ExtraLogo.Items.Add(logosString);
-                player2ExtraLogo.Items.Add(logosString);
+                String extraLogoDirectory = "Extra Logos/";
+                extraLogoDirectory += extraLogoSelector.SelectedItem.ToString();
+                String[] logosList = Directory.GetFiles(extraLogoDirectory);
+                System.IO.File.WriteAllLines("./Extra Logos.txt", logosList);
+                foreach (String logos in logosList)
+                {
+                    String logosString = logos;
+                    logosString = logosString.Remove(0, extraLogoDirectory.Length + 1);
+                    logosString = logosString.Remove(logosString.LastIndexOf('.'));
+                    player1ExtraLogo.Items.Add(logosString);
+                    player2ExtraLogo.Items.Add(logosString);
+                }
             }
         }
 
@@ -200,6 +204,7 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         // RESET
         private void resetButton_Click(object sender, EventArgs e)
         {
+            // MAIN SCOREBOARD
             player1Name.Text = player1Name.Tag.ToString();
             player2Name.Text = player2Name.Tag.ToString();
             player1Score.Value = 0;
@@ -223,6 +228,22 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             player2Flag.Text = player2Flag.Tag.ToString();
             player1Logo.Text = player1Logo.Tag.ToString();
             player2Logo.Text = player2Logo.Tag.ToString();
+
+            //EXTRA SCOREBOARD
+            commentator1Name.Text = commentator1Name.Tag.ToString();
+            commentator2Name.Text = commentator2Name.Tag.ToString();
+            commentator1Subtext.Text = commentator1Subtext.Tag.ToString();
+            commentator2Subtext.Text = commentator2Subtext.Tag.ToString();
+
+            extraLogoSelector.SelectedIndex = -1;
+            player1ExtraLogo.SelectedIndex = -1;
+            player2ExtraLogo.SelectedIndex = -1;
+            extraLogoSelector.Text = extraLogoSelector.Tag.ToString();
+            player1ExtraLogo.Text = player1ExtraLogo.Tag.ToString();
+            player2ExtraLogo.Text = player2ExtraLogo.Tag.ToString();
+
+            miscText1.Text = miscText1.Tag.ToString();
+            miscText2.Text = miscText2.Tag.ToString();
         }
 
         // UPDATE
