@@ -74,12 +74,57 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             String extraPath = System.IO.File.ReadLines("./Extra Logos.txt").Skip(index).First();
             return extraPath;
         }
+        public void EnableDarkMode()
+        {
+            BackColor = Color.FromArgb(255, 17, 17, 17);
+            mainScoreboardTab.BackColor = Color.FromArgb(255, 27, 27, 27);
+            scoreboardEssentials.ForeColor = Color.White;
+            scoreboardEssentialsDivider.ForeColor = Color.White;
+            scoreboardAdditions.ForeColor = Color.White;
+            scoreboardAdditionsDivider.ForeColor = Color.White;
+            player1Name.BackColor = Color.FromArgb(255, 58, 58, 58);
+            player2Name.ForeColor = Color.White;
+            player2Name.BackColor = Color.FromArgb(255, 58, 58, 58);
+            player1Subtext.BackColor = Color.FromArgb(255, 58, 58, 58);
+            player1Subtext.BackColor = Color.FromArgb(255, 58, 58, 58);
+            player1Score.BackColor = Color.FromArgb(255, 58, 58, 58);
+            player1Score.BackColor = Color.FromArgb(255, 58, 58, 58);
+        }
+        public void DisableDarkMode()
+        {
+            BackColor = Scoreboard.DefaultBackColor;
+            mainScoreboardTab.BackColor = Color.Transparent;
+        }
+        private void ApplySettings()
+        {
+            String rememberFieldsString = System.IO.File.ReadAllText("./DO NOT TOUCH/Settings/Remember Fields.txt");
+            bool rememberFieldsSetting = bool.Parse(rememberFieldsString);
+            if (!rememberFieldsSetting)
+            {
+                System.IO.File.WriteAllText("./DO NOT TOUCH/Settings/Dark Mode.txt", "False");
+                return;
+            }
+
+            // if the setting is turned on
+
+            // enables dark mode
+            String darkModeString = System.IO.File.ReadAllText("./DO NOT TOUCH/Settings/Dark Mode.txt");
+            bool darkModeSetting = bool.Parse(darkModeString);
+            if (darkModeSetting == true)
+            {
+                EnableDarkMode();
+            }
+
+
+
+        }
 
         // INITIALIZATION /////////////////////////////////////////////////////////////////////////
         public Scoreboard() 
         {
             InitializeComponent();
             ReadBaseFolders();
+            ApplySettings();
         }
 
         // SWAP BUTTONS ///////////////////////////////////////////////////////////////////////////
@@ -188,7 +233,7 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
         // SETTINGS
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            Settings settings = new Settings();
+            Settings settings = new Settings(this);
             settings.ShowDialog();
         }
 
@@ -274,8 +319,8 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             // MAIN SCOREBOARD
             System.IO.File.WriteAllText("Main Output/Player 1 Name.txt", player1Name.Text);
             System.IO.File.WriteAllText("Main Output/Player 2 Name.txt", player2Name.Text);
-            System.IO.File.WriteAllText("Main Output/Player 1 Score.txt", player1Score.ToString());
-            System.IO.File.WriteAllText("Main Output/Player 2 Score.txt", player2Score.ToString());
+            System.IO.File.WriteAllText("Main Output/Player 1 Score.txt", player1Score.Value.ToString());
+            System.IO.File.WriteAllText("Main Output/Player 2 Score.txt", player2Score.Value.ToString());
             System.IO.File.WriteAllText("Main Output/Set.txt", set.Text);
 
             System.IO.File.WriteAllText("Main Output/Game.txt", gameSelector.Text);

@@ -28,37 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.darkModeCheckBox = new System.Windows.Forms.CheckBox();
+            this.rememberFieldsCheckbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // darkModeCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 12);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(84, 19);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Dark Mode";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.darkModeCheckBox.AutoSize = true;
+            this.darkModeCheckBox.Location = new System.Drawing.Point(12, 12);
+            this.darkModeCheckBox.Name = "darkModeCheckBox";
+            this.darkModeCheckBox.Size = new System.Drawing.Size(84, 19);
+            this.darkModeCheckBox.TabIndex = 0;
+            this.darkModeCheckBox.Text = "Dark Mode";
+            this.darkModeCheckBox.UseVisualStyleBackColor = true;
+            this.darkModeCheckBox.CheckedChanged += new System.EventHandler(this.darkModeCheckBox_CheckedChanged);
             // 
-            // checkBox2
+            // rememberFieldsCheckbox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(12, 37);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(117, 19);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Remember Fields";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.rememberFieldsCheckbox.AutoSize = true;
+            this.rememberFieldsCheckbox.Location = new System.Drawing.Point(12, 37);
+            this.rememberFieldsCheckbox.Name = "rememberFieldsCheckbox";
+            this.rememberFieldsCheckbox.Size = new System.Drawing.Size(117, 19);
+            this.rememberFieldsCheckbox.TabIndex = 1;
+            this.rememberFieldsCheckbox.Text = "Remember Fields";
+            this.rememberFieldsCheckbox.UseVisualStyleBackColor = true;
+            this.rememberFieldsCheckbox.CheckedChanged += new System.EventHandler(this.rememberFieldsCheckbox_CheckedChanged);
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(203, 68);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.rememberFieldsCheckbox);
+            this.Controls.Add(this.darkModeCheckBox);
             this.Name = "Settings";
             this.Text = "Settings";
             this.ResumeLayout(false);
@@ -68,7 +70,7 @@
 
         #endregion
 
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
+        private CheckBox darkModeCheckBox;
+        private CheckBox rememberFieldsCheckbox;
     }
 }

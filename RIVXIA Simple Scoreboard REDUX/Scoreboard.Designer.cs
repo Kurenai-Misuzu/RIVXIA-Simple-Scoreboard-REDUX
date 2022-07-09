@@ -39,7 +39,7 @@
             this.player1CharacterSelect = new System.Windows.Forms.ComboBox();
             this.gameSelector = new System.Windows.Forms.ComboBox();
             this.scoreboardAdditionsDivider = new System.Windows.Forms.Label();
-            this.scorebordAdditions = new System.Windows.Forms.Label();
+            this.scoreboardAdditions = new System.Windows.Forms.Label();
             this.scoreboardEssentialsDivider = new System.Windows.Forms.Label();
             this.scoreboardEssentials = new System.Windows.Forms.Label();
             this.player2Subtext = new System.Windows.Forms.TextBox();
@@ -144,6 +144,7 @@
             // 
             // mainScoreboardTab
             // 
+            this.mainScoreboardTab.BackColor = System.Drawing.Color.Transparent;
             this.mainScoreboardTab.Controls.Add(this.player2Logo);
             this.mainScoreboardTab.Controls.Add(this.player1Logo);
             this.mainScoreboardTab.Controls.Add(this.additionsSwapButton);
@@ -153,7 +154,7 @@
             this.mainScoreboardTab.Controls.Add(this.player1CharacterSelect);
             this.mainScoreboardTab.Controls.Add(this.gameSelector);
             this.mainScoreboardTab.Controls.Add(this.scoreboardAdditionsDivider);
-            this.mainScoreboardTab.Controls.Add(this.scorebordAdditions);
+            this.mainScoreboardTab.Controls.Add(this.scoreboardAdditions);
             this.mainScoreboardTab.Controls.Add(this.scoreboardEssentialsDivider);
             this.mainScoreboardTab.Controls.Add(this.scoreboardEssentials);
             this.mainScoreboardTab.Controls.Add(this.player2Subtext);
@@ -170,7 +171,6 @@
             this.mainScoreboardTab.Size = new System.Drawing.Size(520, 281);
             this.mainScoreboardTab.TabIndex = 0;
             this.mainScoreboardTab.Text = "Main Scoreboard";
-            this.mainScoreboardTab.UseVisualStyleBackColor = true;
             // 
             // player2Logo
             // 
@@ -261,14 +261,14 @@
             this.scoreboardAdditionsDivider.Size = new System.Drawing.Size(507, 2);
             this.scoreboardAdditionsDivider.TabIndex = 11;
             // 
-            // scorebordAdditions
+            // scoreboardAdditions
             // 
-            this.scorebordAdditions.AutoSize = true;
-            this.scorebordAdditions.Location = new System.Drawing.Point(6, 130);
-            this.scorebordAdditions.Name = "scorebordAdditions";
-            this.scorebordAdditions.Size = new System.Drawing.Size(121, 15);
-            this.scorebordAdditions.TabIndex = 10;
-            this.scorebordAdditions.Text = "Scoreboard Additions";
+            this.scoreboardAdditions.AutoSize = true;
+            this.scoreboardAdditions.Location = new System.Drawing.Point(6, 130);
+            this.scoreboardAdditions.Name = "scoreboardAdditions";
+            this.scoreboardAdditions.Size = new System.Drawing.Size(121, 15);
+            this.scoreboardAdditions.TabIndex = 10;
+            this.scoreboardAdditions.Text = "Scoreboard Additions";
             // 
             // scoreboardEssentialsDivider
             // 
@@ -1083,6 +1083,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(550, 361);
             this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.resetButton);
@@ -1132,7 +1133,7 @@
 
         // Scoreboard Additions Label
         private Label scoreboardAdditionsDivider;
-        private Label scorebordAdditions;
+        private Label scoreboardAdditions;
 
         // Scorebord Additions Fields
         private ComboBox gameSelector;
