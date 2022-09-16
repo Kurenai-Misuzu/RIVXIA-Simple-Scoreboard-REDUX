@@ -321,6 +321,8 @@ namespace RIVXIA_Simple_Scoreboard_REDUX
             System.IO.File.WriteAllText("Main Output/Player 2 Name.txt", player2Name.Text);
             System.IO.File.WriteAllText("Main Output/Player 1 Score.txt", player1Score.Value.ToString());
             System.IO.File.WriteAllText("Main Output/Player 2 Score.txt", player2Score.Value.ToString());
+            System.IO.File.WriteAllText("Main Output/Player 1 Subtext.txt", player1Subtext.Text);
+            System.IO.File.WriteAllText("Main Output/Player 2 Subtext.txt", player2Subtext.Text);
             System.IO.File.WriteAllText("Main Output/Set.txt", set.Text);
 
             System.IO.File.WriteAllText("Main Output/Game.txt", gameSelector.Text);
