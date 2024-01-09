@@ -1,3 +1,8 @@
+# NOTICE
+This program probably won't be finished as I've gone to do more broadcasting work. Please contact me if something
+Should be updated in the program to fit your needs.
+Thank you.
+
 # RIVXIA-Simple-Scoreboard-REDUX
 An updated version of the RIVXIA Simple Scoreboard   
 This program is primarily designed to allow a user to easily update a fighting game / Smash bros. overlay on a livestream.  
